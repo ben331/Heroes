@@ -22,7 +22,7 @@ export const HeroCard = ({hero=none}) => {
           <div className="row no-gutters">
             <div className="col-4">
               <img className="card-img"
-                src={`/public/assets/${id}.jpg`}
+                src={`/assets/${id}.jpg`}
                 alt={`No load img: ${id}`}
               />
             </div>
