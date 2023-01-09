@@ -3,11 +3,16 @@ import { Navbar } from "../../ui"
 import { HomePage } from "../pages"
 import { HeroPage } from "../pages/HeroPage"
 import { SearchPage } from "../pages/SearchPage"
+import { AuthContext } from "../../auth"
+import { useContext } from "react"
 
 export const HeroesRoutes = () => {
+
+  const {user} = useContext( AuthContext )
+
   return (
     <>
-        <Navbar />
+        <Navbar username={user}/>
         <div className="containter">
           <Routes>
             <Route path="marvel" element={ <HomePage owner='Marvel Comics'/> } />

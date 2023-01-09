@@ -1,7 +1,8 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 
-export const Navbar = () => {
+export const Navbar = ({username}) => {
 
+    console.log(username)
     const navigate = useNavigate();
 
     const onLogout = () => {
@@ -22,7 +23,7 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
                     <NavLink className="nav-item nav-link" to="/search">Search</NavLink>
-                    <NavLink className="nav-item nav-link text-info" to="/login">Benjamin</NavLink>
+                    <NavLink className="nav-item nav-link text-info" to="/login">{ username }</NavLink>
                     <button className='nav-item nav-link btn' onClick={onLogout}>
                         Logout
                     </button>
