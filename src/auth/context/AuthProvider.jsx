@@ -8,7 +8,7 @@ const init = () => {
   const user = JSON.parse( localStorage.getItem('user') )
 
   return {
-    logged: !!user,
+    isLogged: !!user,
     user: user,
   }
 }
