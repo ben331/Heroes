@@ -8,11 +8,11 @@ import { useContext } from "react"
 
 export const HeroesRoutes = () => {
 
-  const {user} = useContext( AuthContext )
+  const {user:{name}} = useContext( AuthContext )
 
   return (
     <>
-        <Navbar username={user}/>
+        <Navbar username={name}/>
         <div className="containter">
           <Routes>
             <Route path="marvel" element={ <HomePage owner='Marvel Comics'/> } />

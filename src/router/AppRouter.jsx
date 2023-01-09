@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom"
 
 import { LoginPage } from "../auth"
 import { HeroesRoutes } from "../heroes/routes/HeroesRoutes"
-import { Navbar } from "../ui/components/Navbar"
 
 export const AppRouter = () => {
   return (
