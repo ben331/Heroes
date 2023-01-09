@@ -29,14 +29,13 @@ export const AuthProvider = ({children}) => {
 
     const onLogout = () => {
       const action = {
-        type: types.logout,
-        payload: user
+        type: types.logout
       }
       authDispatch(action)
     }
 
   return (
-    <AuthContext.Provider value={{...authState, onLogin}}>
+    <AuthContext.Provider value={{...authState, onLogin, onLogout}}>
         { children }
     </AuthContext.Provider>
   )
